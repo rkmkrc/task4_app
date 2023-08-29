@@ -22,6 +22,7 @@ struct Coordinates: Codable {
 }
 
 struct WeatherItems: Codable {
+    let id: Int?
     let main: String?
     let description: String?
 }

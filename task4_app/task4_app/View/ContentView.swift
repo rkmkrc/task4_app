@@ -21,7 +21,7 @@ struct ContentView: View {
         VStack(spacing: 20) {
             if let lat = locationManager.latitude, let lon = locationManager.longitude {
                 Text(cityName).font(.title).padding(.init(top: 50, leading: 0, bottom: 0, trailing: 0))
-                Image(systemName: "sun.min").font(.title)
+                Image(systemName: weatherCondition).font(.title)
                 Text("\(degree) \u{00B0}C")
                 HStack {
                     Text("Max: \(maxDegree)\u{00B0}C")
@@ -42,6 +42,9 @@ struct ContentView: View {
                         }
                     }
                 }
+            } else {
+                Spacer()
+                Text(MyError.PERMISSON_ERROR)
             }
             Spacer()
         }
@@ -55,6 +58,8 @@ struct ContentView: View {
         self.minDegree = "\(city.main?.tempMin ?? Constants.placeholderTemperature)"
         self.maxDegree = "\(city.main?.tempMax ?? Constants.placeholderTemperature)"
         self.degree = "\(city.main?.temp ?? Constants.placeholderTemperature)"
+        self.weatherCondition = city.weather?[0].main ?? Constants.placeholderWeatherDescription
+        self.weatherCondition = systemImageName(for: weatherCondition) // Selecting icon for weather type.
     }
 }
 

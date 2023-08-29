@@ -20,14 +20,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         locationManager.delegate = self
     }
     
-    func getCoordinates(completion: @escaping (String, String) -> Void) {
-        if let lat = latitude, let lon = longitude {
-            completion("\(lat)", "\(lon)")
-        } else {
-            print("Lati Lon are nil")
-        }
-    }
-    
     func requestLocation() {
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -38,12 +30,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         if let location = locations.last {
             latitude = location.coordinate.latitude
             longitude = location.coordinate.longitude
-
-            // Call getCoordinates here, after the location updates
-            self.getCoordinates { lat, lon in
-                let weatherURL = NetworkManager.shared.getWeatherURL(lat: "\(lat)", lon: "\(lon)")
-                print(weatherURL ?? "")
-            }
         }
     }
 

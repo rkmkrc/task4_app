@@ -17,6 +17,7 @@
 		7D03B54C2A9E1FAD0069C4E4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D03B54B2A9E1FAD0069C4E4 /* NetworkManager.swift */; };
 		7D03B54E2A9E31930069C4E4 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D03B54D2A9E31930069C4E4 /* City.swift */; };
 		7D03B5502A9E50ED0069C4E4 /* Constants+MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D03B54F2A9E50ED0069C4E4 /* Constants+MyError.swift */; };
+		7D03B5552A9E5F000069C4E4 /* IconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D03B5542A9E5F000069C4E4 /* IconManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7D03B54B2A9E1FAD0069C4E4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7D03B54D2A9E31930069C4E4 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		7D03B54F2A9E50ED0069C4E4 /* Constants+MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+MyError.swift"; sourceTree = "<group>"; };
+		7D03B5542A9E5F000069C4E4 /* IconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +66,12 @@
 		7D03B52F2A9E1D4C0069C4E4 /* task4_app */ = {
 			isa = PBXGroup;
 			children = (
+				7D03B5562A9E61E90069C4E4 /* App */,
+				7D03B5522A9E5EDA0069C4E4 /* Utils */,
 				7D03B5512A9E58A50069C4E4 /* View */,
 				7D03B5482A9E1EB30069C4E4 /* Model */,
 				7D03B5452A9E1DE70069C4E4 /* task4-app-Info.plist */,
-				7D03B5302A9E1D4C0069C4E4 /* task4_appApp.swift */,
 				7D03B5342A9E1D4C0069C4E4 /* Assets.xcassets */,
-				7D03B5392A9E1D4C0069C4E4 /* Persistence.swift */,
 				7D03B53B2A9E1D4C0069C4E4 /* task4_app.xcdatamodeld */,
 				7D03B5362A9E1D4C0069C4E4 /* Preview Content */,
 			);
@@ -101,6 +103,23 @@
 				7D03B5322A9E1D4C0069C4E4 /* ContentView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		7D03B5522A9E5EDA0069C4E4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7D03B5542A9E5F000069C4E4 /* IconManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7D03B5562A9E61E90069C4E4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7D03B5302A9E1D4C0069C4E4 /* task4_appApp.swift */,
+				7D03B5392A9E1D4C0069C4E4 /* Persistence.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +200,7 @@
 				7D03B5332A9E1D4C0069C4E4 /* ContentView.swift in Sources */,
 				7D03B5312A9E1D4C0069C4E4 /* task4_appApp.swift in Sources */,
 				7D03B54E2A9E31930069C4E4 /* City.swift in Sources */,
+				7D03B5552A9E5F000069C4E4 /* IconManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
